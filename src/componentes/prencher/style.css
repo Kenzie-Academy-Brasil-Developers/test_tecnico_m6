@@ -1,0 +1,33 @@
+form{
+    height: 100%;
+    width: 60%;
+    border: rgb(179, 217, 250) solid 1px;
+}
+
+.ajustarImput{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    margin-left: -35px;
+}
+
+input{
+    margin-top: 5px;
+    height: 25px;
+    width: 200px;
+    border: grey solid 1px;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: -5px;
+    color: grey;
+    margin-left: -30px;
+
+}
+
+p{
+    color: grey;
+}

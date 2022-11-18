@@ -1,0 +1,19 @@
+.results{
+    height: 100%;
+    width: 40%;
+    border: rgb(179, 217, 250) solid 1px;
+    background-color: aliceblue;
+}
+
+.textCenter{
+    display: flex;
+    justify-content: center;
+}
+
+.textAjusting{
+    display: flex;
+    justify-content: center;
+    color: blue;
+}
+
+

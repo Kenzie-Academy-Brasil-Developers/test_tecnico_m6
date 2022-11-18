@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    border: 0px;
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    background: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    }
+
+.App-header {
+    width: 500px;
+    height: 300px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    }
+
+

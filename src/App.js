@@ -1,9 +1,12 @@
 import { useState } from "react";
 // import { useEffect, useState } from "react";
+
 import api from "./api";
 
+import "./componentes/style.css"
 
-// console.log((Math.floor(Math.random() * 100) + 1))
+import Resultados from "./componentes/resultados/exibirResultado"
+import InputInserrir from "./componentes/prencher/formIncerrirDados"
 
 function App() {
 
@@ -12,10 +15,10 @@ function App() {
     "15": 0,
     "30": 0,
     "90": 0
-} 
+  } 
 
   const [Dados, setDados] = useState(dadosIniciais);
-  // const [alterarDados, setAlterarDados] = useState(dadosIniciais)
+
   const [valorDaVenda, setvalorDaVenda] = useState(undefined);
   const [quantidadeDeParcelas, setQuantidadeDeParcelas] = useState(undefined);
   const [porcentualDeMDR, setPorcentualDeMDR] = useState(undefined);
@@ -27,6 +30,12 @@ function App() {
       "installments": quantidadeDeParcelas,
       "mdr": porcentualDeMDR
     }
+
+    // const exenplo = {
+    //   "amount": 1000,
+    //   "installments": 3,
+    //   "mdr": 4
+    // }
 
     if(valorDaVenda === undefined){
       alert("digite um valor de venda");
@@ -42,11 +51,7 @@ function App() {
       alert("digite um porcentual de MDR");
       return "finalizada no digite um porcentual de MDR"
     }
-    // const exenplo = {
-    //   "amount": 1000,
-    //   "installments": 3,
-    //   "mdr": 4
-    // }
+
     api.post("https://frontend-challenge-7bu3nxh76a-uc.a.run.app",dadosParaNovaRequisisao
     )
       .then((response) => setDados(response.data))
@@ -56,35 +61,13 @@ function App() {
       });
   }
 
-  // function increment (){
-
-  //   setDados(alterarDados)
-  // }
-
-
-
   return (
     <div className="App">
       <header className="App-header">
 
-      <form>
-      <input id="valorDaVenda"onChange={(event) => setvalorDaVenda(event.target.value)}></input>
-      <br></br>
-      <input id="quantidadeDeParcelas"onChange={(event) => setQuantidadeDeParcelas(event.target.value)}></input>
-      <br></br>
-      <input id="porcentualDeMDR"onChange={(event) => setPorcentualDeMDR(event.target.value)}></input>
-      {/* <button id="btnEnviar" type="submit"></button> */}
-      </form>
-
-      {/* <button onClick={(event) => console.log(valorDaVenda)}>gggg</button>
-      <button onClick={(event) => console.log(quantidadeDeParcelas)}>gggg</button>
-      <button onClick={(event) => console.log(porcentualDeMDR)}>gggg</button> */}
-        <span>{Dados["1"]}-</span>
-        <span>{Dados["15"]}-</span>
-        <span>{Dados["30"]}-</span>
-        <span>{Dados["90"]}</span>
-        <br></br>
-        <button onClick={ () => consumirApi()}>gerar</button>
+          <InputInserrir setQuantidadeDeParcelas = {setQuantidadeDeParcelas} setvalorDaVenda = {setvalorDaVenda} setPorcentualDeMDR = {setPorcentualDeMDR}></InputInserrir>
+          <Resultados Dados = {Dados} consumirApi = {consumirApi}></Resultados>
+            
       </header>
     </div>
   );
