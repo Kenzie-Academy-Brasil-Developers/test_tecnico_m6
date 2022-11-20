@@ -4,6 +4,3 @@ resolvi revisando projetos antigos para relenbrar os conseitos de como conponent
 
 * nessa aplicacao escolhi usar as variaveis e funcoes em portugues 
 - escolhi dessa forma porque me senti mais confortavel assim 
-
-* escolhi manter a funcao consumir sem conponentizar
-- escolhi isso porque ela mexe com muitas variaveis que estao na app.js 
