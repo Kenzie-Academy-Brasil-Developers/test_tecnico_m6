@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import { useEffect, useState } from "react";
 
-import api from "./api";
+import api from "./componentes/api";
 
 import "./componentes/style.css"
 
@@ -30,12 +30,6 @@ function App() {
       "installments": quantidadeDeParcelas,
       "mdr": porcentualDeMDR
     }
-
-    // const exenplo = {
-    //   "amount": 1000,
-    //   "installments": 3,
-    //   "mdr": 4
-    // }
 
     if(valorDaVenda === undefined){
       alert("digite um valor de venda");

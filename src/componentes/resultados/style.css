@@ -16,4 +16,19 @@
     color: blue;
 }
 
+h4{
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: blue;
+}
 
+span{
+    margin-bottom: -5px;
+}
+
+button{
+    background-color: blanchedalmond;
+    color: blue;
+    border: black solid 1px;
+
+}

@@ -5,13 +5,13 @@ const gerrarCardResultado = ({ Dados, consumirApi })=>{
     return (
         <section className="results">
             <h4 className="textCenter">VOCÊ RECEBERÁ</h4>
-            <span className="textAjusting">Amanhã: R${Dados["1"]}</span>
+            <span className="textAjusting">Amanhã : <p>R${Dados["1"]}</p></span>
             <br></br>
-            <span className="textAjusting">Em 15 dias : R${Dados["15"]}</span>
+            <span className="textAjusting">Em 15 dias : <p>R${Dados["15"]}</p></span>
             <br></br>
-            <span className="textAjusting">Em 30 dias : R${Dados["30"]}</span>
+            <span className="textAjusting">Em 30 dias : <p>R${Dados["30"]}</p></span>
             <br></br>
-            <span className="textAjusting">Em 90 dias : R${Dados["90"]}</span>
+            <span className="textAjusting">Em 90 dias : <p>R${Dados["90"]}</p></span>
             <br></br>
             <div className="textCenter">
                 <button onClick={ () => consumirApi()}>conferir</button>
